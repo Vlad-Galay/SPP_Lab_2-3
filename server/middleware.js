@@ -10,8 +10,9 @@ let createToken = (username) => {
 let checkToken = (req, res, next) => {
 	//get auth header value
 
-	console.log(req);
-    var token = req.body.token;
+	
+	const token = req.headers.authorization;
+	console.log(token);
     if (token) {
     	try{
     		jwt.verify(token,config.secret);

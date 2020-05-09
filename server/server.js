@@ -8,7 +8,6 @@ var app = express();
 var cors = require('cors');
 var jsonParser = bodyParser.json();
 
-//app.use(express.static(__dirname + "/public"));
 app.use(cors());
 app.use(cookieParser());
 
